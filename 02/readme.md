@@ -16,7 +16,7 @@
 
 ### Задание 1
 
-Повторите и проанализируйте Pomodoro [Main.java](Main.java). 
+Повторите и проанализируйте Pomodoro [Main.java](Main.java) или посмотри сюда https://github.com/GSkoba/pomodoro-github-actions
 
 ### Задание 2 
 

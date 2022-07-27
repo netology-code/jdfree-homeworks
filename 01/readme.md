@@ -40,7 +40,7 @@
 
 ![](pic/08.png)
 
-Шаг 9. В появившемся окне в поле Language выберите Java, в поле "System" выберите "IntelliJ":
+Шаг 9. В появившемся окне в поле "Language" выберите "Java", в поле "System" выберите "IntelliJ":
 
 ![](pic/09.png)
 

@@ -10,11 +10,7 @@
 
 ### Инструкция по установке IntelliJ IDEA
 
-Устанавливаем [Intellij Idea, версия Community](https://www.jetbrains.com/ru-ru/idea/))
-
-# Установка IntelliJ IDEA
-
-Шаг 1. Перейдите по адресу https://www.jetbrains.com/toolbox/app/, выберите необходиму ОС и нажмите кнопку "Скачать":
+Шаг 1. Перейдите по адресу [Intellij Idea, версия Community](https://www.jetbrains.com/ru-ru/idea/)), выберите необходиму ОС и нажмите кнопку "Скачать":
 
 ![](pic/toolbox-web.png)
 

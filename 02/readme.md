@@ -16,4 +16,4 @@
 
 ### Задание 1
 
-Повторите и проанализируйте Pomodoro
+Повторите и проанализируйте Pomodoro https://github.com/Arseny-java/PomodoroMine/blob/master/src/main/java/Main.java

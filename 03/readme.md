@@ -17,8 +17,4 @@
 
 ### Задание 1
 
-Повторите и проанализируйте Pomodoro bot [Main.java](Main.java) или смотри github.com/GSkoba/netology-bots/blob/main/src/main/java/com/skobelev/Main.java
-
-### Задание 2 
-
-Добавьте в Pomodoro bot возможность задать несколько итераций
+Повторите и проанализируйте Pomodoro bot https://github.com/Arseny-java/PomodoroBot

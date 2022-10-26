@@ -17,8 +17,4 @@
 
 ### Задание 1
 
-Попробуйте отправить github.com/GSkoba/netology-bots/blob/main/src/main/java/com/skobelev/Main.java на какой нибудь cloud. Выбор за вами, но советую попробовать заиспользовать Yandex Cloud https://cloud.yandex.ru/docs/compute/quickstart/
-
-### Задание 2 
-
-Попробуйте локально поработать с БД postgres
+Скопируйте код https://github.com/Arseny-java/PomodoroHerokuBot. Задеплойте на Heroku. Вы восхитительны:)

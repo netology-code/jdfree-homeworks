@@ -9,11 +9,9 @@
 
 ### Чеклист готовности к домашнему заданию:
 
-1. Для выполнения задания и дальнейшего прохождения курса требуется компьютер с операционной системой Windows, MacOS или Linux с установленной последней версией браузера Chrome
-2. Пишите код в IDE (рекомендуем [Intellij Idea, версия Community](https://www.jetbrains.com/ru-ru/idea/)). Почему лучше работать в IDE? — Ускоряет работу, есть подсветка ошибок, отладка по шагам. Почему Intellij Idea? — Родитель Android Studio, бесплатная, умная.
+1. 
 
 ------
 
 ### Задание 1
 
-Повторите и проанализируйте Pomodoro https://github.com/Arseny-java/PomodoroMine/blob/master/src/main/java/Main.java

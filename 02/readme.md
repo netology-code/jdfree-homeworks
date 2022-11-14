@@ -48,13 +48,14 @@
   "url": "https://apod.nasa.gov/apod/image/2007/DSC1028_PetersNEOWISEAuroralSpike_800.jpg"
 }
 ```
-Что нужно сделать
+### Что нужно сделать
 Получить ключ для API NASA по адресу: https://api.nasa.gov/
 Сделать запрос из кода: https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ
 Создать класс ответа и разобрать json-ответ с помощью Jackson или Gson
 Найти поле url в ответе и скачать массив byte, который сохранить в файл
 Имя файла должно быть взято из части url
-Реализация
+
+### Реализация
 Создайте проект maven или gradle и добавьте в pom.xml или gradle.build библиотеку apache httpclient
 Пример:
 

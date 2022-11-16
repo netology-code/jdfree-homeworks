@@ -47,7 +47,7 @@
 5. Имя файла должно быть взято из части url
 
 ### Реализация
-Создайте проект `maven` или `gradle` и добавьте в pom.xml или gradle.build библиотеку apache httpclient
+1. Создайте проект `maven` или `gradle` и добавьте в pom.xml или gradle.build библиотеку apache httpclient
 
 Пример:
 
@@ -59,7 +59,7 @@
 </dependency>
 ```
 
-Создайте метод в который добавьте и настройте класс `CloseableHttpClient` например с помощью builder
+2. Создайте метод в который добавьте и настройте класс `CloseableHttpClient` например с помощью builder
 
 ```cs{
 CloseableHttpClient httpClient = HttpClientBuilder.create()

@@ -49,14 +49,15 @@
 }
 ```
 ### Что нужно сделать
-Получить ключ для API NASA по адресу: https://api.nasa.gov/
-Сделать запрос из кода: https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ
-Создать класс ответа и разобрать json-ответ с помощью Jackson или Gson
-Найти поле url в ответе и скачать массив byte, который сохранить в файл
+Получить ключ для API NASA по адресу: https://api.nasa.gov/ <br>
+Сделать запрос из кода: https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ <br>
+Создать класс ответа и разобрать json-ответ с помощью Jackson или Gson <br>
+Найти поле url в ответе и скачать массив byte, который сохранить в файл <br>
 Имя файла должно быть взято из части url
 
 ### Реализация
 Создайте проект maven или gradle и добавьте в pom.xml или gradle.build библиотеку apache httpclient
+
 Пример:
 
 <dependency>
@@ -72,8 +73,10 @@ CloseableHttpClient httpClient = HttpClientBuilder.create()
         .setRedirectsEnabled(false) // возможность следовать редиректу в ответе
         .build())
     .build();
-Добавьте объект запроса HttpGet request = new HttpGet("https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ") и вызовите удаленный сервис CloseableHttpResponse response = httpClient.execute(request);
+
+Добавьте объект запроса HttpGet request = new HttpGet("https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ") и вызовите удаленный сервис CloseableHttpResponse response = httpClient.execute(request);<br>
 Добавьте в pom.xml или gradle.build библиотеку для работы с json
+
 Пример:
 
 <dependency>
@@ -81,10 +84,10 @@ CloseableHttpClient httpClient = HttpClientBuilder.create()
    <artifactId>jackson-databind</artifactId>
    <version>2.11.1</version>
 </dependency>
-Создайте класс, в который будем преобразовывать json ответ от сервера;
-Преобразуйте json в java-объект;
-В java-объекте найдите поле url и сделайте с ним еще один http-запрос с помощью уже созданного httpClient;
-Сохраните тело ответа в файл с именем части url;
-Проверьте, что файл скачивается и открывается;
+Создайте класс, в который будем преобразовывать json ответ от сервера;<br>
+Преобразуйте json в java-объект;<br>
+В java-объекте найдите поле url и сделайте с ним еще один http-запрос с помощью уже созданного httpClient;<br>
+Сохраните тело ответа в файл с именем части url;<br>
+Проверьте, что файл скачивается и открывается;<br>
 Отправьте задачу на проверку.
 

@@ -42,14 +42,14 @@
 }
 ```
 ### Что нужно сделать
-Получить ключ для API NASA по адресу: https://api.nasa.gov/ <br>
-Сделать запрос из кода: https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ <br>
-Создать класс ответа и разобрать json-ответ с помощью Jackson или Gson <br>
-Найти поле url в ответе и скачать массив byte, который сохранить в файл <br>
-Имя файла должно быть взято из части url
+1. Получить ключ для API NASA по адресу: https://api.nasa.gov/ <br>
+2. Сделать запрос из кода: https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ <br>
+3. Создать класс ответа и разобрать json-ответ с помощью Jackson или Gson <br>
+4. Найти поле url в ответе и скачать массив byte, который сохранить в файл <br>
+5. Имя файла должно быть взято из части url
 
 ### Реализация
-Создайте проект maven или gradle и добавьте в pom.xml или gradle.build библиотеку apache httpclient
+Создайте проект `maven` или `gradle` и добавьте в pom.xml или gradle.build библиотеку apache httpclient
 
 Пример:
 
@@ -61,10 +61,10 @@
 </dependency>
 ```
 
-Создайте метод в который добавьте и настройте класс CloseableHttpClient например с помощью builder
-CloseableHttpClient httpClient = HttpClientBuilder.create()
+Создайте метод в который добавьте и настройте класс `CloseableHttpClient` например с помощью builder
 
 ```cs{
+CloseableHttpClient httpClient = HttpClientBuilder.create()
     .setDefaultRequestConfig(RequestConfig.custom()
         .setConnectTimeout(5000)    // максимальное время ожидание подключения к серверу
         .setSocketTimeout(30000)    // максимальное время ожидания получения данных

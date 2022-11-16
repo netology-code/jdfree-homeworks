@@ -73,7 +73,7 @@ CloseableHttpClient httpClient = HttpClientBuilder.create()
     .build();
 ```
 
-3. Добавьте объект запроса HttpGet request = new HttpGet("https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ") и вызовите удаленный сервис CloseableHttpResponse response = httpClient.execute(request);<br>
+3. Добавьте объект запроса HttpGet request = new HttpGet("https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ") и вызовите удаленный сервис 'CloseableHttpResponse response = httpClient.execute(request)';<br>
 4. Добавьте в pom.xml или gradle.build библиотеку для работы с json
 
 Пример:

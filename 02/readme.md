@@ -60,30 +60,39 @@
 
 Пример:
 
+```cs{
 <dependency>
    <groupId>org.apache.httpcomponents</groupId>
    <artifactId>httpclient</artifactId>
    <version>4.5.12</version>
 </dependency>
+```
+
 Создайте метод в который добавьте и настройте класс CloseableHttpClient например с помощью builder
 CloseableHttpClient httpClient = HttpClientBuilder.create()
+
+```cs{
     .setDefaultRequestConfig(RequestConfig.custom()
         .setConnectTimeout(5000)    // максимальное время ожидание подключения к серверу
         .setSocketTimeout(30000)    // максимальное время ожидания получения данных
         .setRedirectsEnabled(false) // возможность следовать редиректу в ответе
         .build())
     .build();
+```
 
 Добавьте объект запроса HttpGet request = new HttpGet("https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ") и вызовите удаленный сервис CloseableHttpResponse response = httpClient.execute(request);<br>
 Добавьте в pom.xml или gradle.build библиотеку для работы с json
 
 Пример:
 
+```cs{
 <dependency>
    <groupId>com.fasterxml.jackson.core</groupId>
    <artifactId>jackson-databind</artifactId>
    <version>2.11.1</version>
 </dependency>
+```
+
 Создайте класс, в который будем преобразовывать json ответ от сервера;<br>
 Преобразуйте json в java-объект;<br>
 В java-объекте найдите поле url и сделайте с ним еще один http-запрос с помощью уже созданного httpClient;<br>

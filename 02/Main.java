@@ -10,16 +10,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class Main {
-    //Наша ссылка, на которую будем отправлять запрос
+    //РќР°С€Р° СЃСЃС‹Р»РєР°, РЅР° РєРѕС‚РѕСЂСѓСЋ Р±СѓРґРµРј РѕС‚РїСЂР°РІР»СЏС‚СЊ Р·Р°РїСЂРѕСЃ
 
-    public static final String URI = "https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ";
+    public static final String URI = "https://api.nasa.gov/planetary/apod?api_key=Р’РђРЁ_РљР›Р®Р§";
 
-    //Сущность, которая будет преобразовывать ответ в наш объект NASA
+    //РЎСѓС‰РЅРѕСЃС‚СЊ, РєРѕС‚РѕСЂР°СЏ Р±СѓРґРµС‚ РїСЂРµРѕР±СЂР°Р·РѕРІС‹РІР°С‚СЊ РѕС‚РІРµС‚ РІ РЅР°С€ РѕР±СЉРµРєС‚ NASA
     public static final ObjectMapper mapper = new ObjectMapper();
 
     public static void main(String[] args) throws IOException {
 
-        //Настраиваем наш HTTP клиент, который будет отправлять запросы
+        //РќР°СЃС‚СЂР°РёРІР°РµРј РЅР°С€ HTTP РєР»РёРµРЅС‚, РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ РѕС‚РїСЂР°РІР»СЏС‚СЊ Р·Р°РїСЂРѕСЃС‹
         CloseableHttpClient httpClient = HttpClientBuilder.create()
                 .setDefaultRequestConfig(RequestConfig.custom()
                         .setConnectTimeout(5000)
@@ -28,24 +28,24 @@ public class Main {
                         .build())
                 .build();
 
-        //Отправляем запрос и получаем ответ
+        //РћС‚РїСЂР°РІР»СЏРµРј Р·Р°РїСЂРѕСЃ Рё РїРѕР»СѓС‡Р°РµРј РѕС‚РІРµС‚
         CloseableHttpResponse response = httpClient.execute(new HttpGet(URI));
 
-        //Преобразуем ответ в Java-объект NasaObject
+        //РџСЂРµРѕР±СЂР°Р·СѓРµРј РѕС‚РІРµС‚ РІ Java-РѕР±СЉРµРєС‚ NasaObject
         NasaObject nasaObject = mapper.readValue(response.getEntity().getContent(), NasaObject.class);
         System.out.println(nasaObject);
 
-        // Отправляем запрос и получаем ответ с нашей картинкой
+        // РћС‚РїСЂР°РІР»СЏРµРј Р·Р°РїСЂРѕСЃ Рё РїРѕР»СѓС‡Р°РµРј РѕС‚РІРµС‚ СЃ РЅР°С€РµР№ РєР°СЂС‚РёРЅРєРѕР№
         CloseableHttpResponse pictureResponse = httpClient.execute(new HttpGet(nasaObject.getUrl()));
 
-        //Формируем автоматически название для файла
+        //Р¤РѕСЂРјРёСЂСѓРµРј Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РЅР°Р·РІР°РЅРёРµ РґР»СЏ С„Р°Р№Р»Р°
         String[] arr = nasaObject.getUrl().split("/");
         String file = arr[6];
 
-        //Проверяем что наш ответ не null
+        //РџСЂРѕРІРµСЂСЏРµРј С‡С‚Рѕ РЅР°С€ РѕС‚РІРµС‚ РЅРµ null
         HttpEntity entity = pictureResponse.getEntity();
         if (entity != null) {
-            //сохраняем в файл
+            //СЃРѕС…СЂР°РЅСЏРµРј РІ С„Р°Р№Р»
             FileOutputStream fos = new FileOutputStream(file);
             entity.writeTo(fos);
             fos.close();

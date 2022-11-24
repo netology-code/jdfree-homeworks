@@ -8,11 +8,11 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import java.io.IOException;
 
 public class MyTelegramBot extends TelegramLongPollingBot {
-    public static final String BOT_TOKEN = "КЛЮЧ ВАШЕГО БОТА";
+    public static final String BOT_TOKEN = "РљР›Р®Р§ Р’РђРЁР•Р“Рћ Р‘РћРўРђ";
 
-    public static final String BOT_USERNAME = "ИМЯ ВАШЕГО БОТА";
+    public static final String BOT_USERNAME = "РРњРЇ Р’РђРЁР•Р“Рћ Р‘РћРўРђ";
 
-    public static final String URI = "https://api.nasa.gov/planetary/apod?api_key=ВАШ КЛЮЧ";
+    public static final String URI = "https://api.nasa.gov/planetary/apod?api_key=Р’РђРЁ РљР›Р®Р§";
 
     public MyTelegramBot() throws TelegramApiException {
         TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
@@ -38,8 +38,8 @@ public class MyTelegramBot extends TelegramLongPollingBot {
         if (update.hasMessage()) {
             switch (update.getMessage().getText()) {
                 case "/help":
-                    sendMessage("Привет, я бот NASA! Я высылаю ссылки на картинки по запросу. " +
-                            "Напоминаю, что картинки на сайте NASA обновляются раз в сутки");
+                    sendMessage("РџСЂРёРІРµС‚, СЏ Р±РѕС‚ NASA! РЇ РІС‹СЃС‹Р»Р°СЋ СЃСЃС‹Р»РєРё РЅР° РєР°СЂС‚РёРЅРєРё РїРѕ Р·Р°РїСЂРѕСЃСѓ. " +
+                            "РќР°РїРѕРјРёРЅР°СЋ, С‡С‚Рѕ РєР°СЂС‚РёРЅРєРё РЅР° СЃР°Р№С‚Рµ NASA РѕР±РЅРѕРІР»СЏСЋС‚СЃСЏ СЂР°Р· РІ СЃСѓС‚РєРё");
                     break;
                 case "/give":
                     try {

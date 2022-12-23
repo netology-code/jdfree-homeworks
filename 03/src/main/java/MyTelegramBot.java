@@ -9,11 +9,11 @@ import java.io.IOException;
 
 public class MyTelegramBot extends TelegramLongPollingBot {
 
-    public static final String BOT_TOKEN = "5807340437:AAGVYcCIlbbRozvhVhY9n_BlzGvS1cdvC-o";
+    public static final String BOT_TOKEN = "КЛЮЧ ВАШЕГО БОТА";
 
-    public static final String BOT_USERNAME = "NasaJDFREE7_bot";
+    public static final String BOT_USERNAME = "ИМЯ ВАШЕГО БОТА";
 
-    public static final String URI = "https://api.nasa.gov/planetary/apod?api_key=Z9FSLcD4VFB7PFsWobvG4C9MtlIBGpYuzd87vqEK";
+    public static final String URI = "https://api.nasa.gov/planetary/apod?api_key=ВАШ КЛЮЧ";
 
     public static long chat_id;
 

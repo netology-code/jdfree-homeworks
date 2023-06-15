@@ -12,7 +12,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
 
     public static final String BOT_USERNAME = "ВАШ БОТ";
 
-    public static final String URI = "https://api.nasa.gov/planetary/apod?api_key=ВАШ КЛЮЧ";
+    public static final String URI = "https://apod.ellanan.com/api";
 
     public static long chatId;
 

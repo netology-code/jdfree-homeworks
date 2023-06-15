@@ -11,8 +11,7 @@ import java.io.IOException;
 
 public class Main {
     //Наша ссылка, на которую будем отправлять запрос
-
-    public static final String URI = "https://api.nasa.gov/planetary/apod?api_key=ВАШ_КЛЮЧ";
+    public static final String URI = "https://apod.ellanan.com/api";
 
     //Сущность, которая будет преобразовывать ответ в наш объект NASA
     public static final ObjectMapper mapper = new ObjectMapper();
@@ -40,16 +39,14 @@ public class Main {
 
         //Формируем автоматически название для файла
         String[] arr = nasaObject.getUrl().split("/");
-        String file = arr[6];
+        String fileName = arr[arr.length - 1];
 
-        //Проверяем что наш ответ не null
         HttpEntity entity = pictureResponse.getEntity();
-        if (entity != null) {
-            //сохраняем в файл
-            FileOutputStream fos = new FileOutputStream(file);
-            entity.writeTo(fos);
-            fos.close();
-        }
+
+        //сохраняем в файл
+        FileOutputStream fos = new FileOutputStream(fileName);
+        entity.writeTo(fos);
+        fos.close();
 
     }
 }

@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class Main {
     //Наша ссылка, на которую будем отправлять запрос
-    public static final String URI = "https://apod.ellanan.com/api";
+    public static final String URI = "https://api.nasa.gov/planetary/apod?api_key=ВАШ КЛЮЧ";
 
     //Сущность, которая будет преобразовывать ответ в наш объект NASA
     public static final ObjectMapper mapper = new ObjectMapper();
